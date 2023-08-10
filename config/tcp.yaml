@@ -1,0 +1,3 @@
+host_names: ['localhost']
+port: 9192
+protocol: 'tcp'
