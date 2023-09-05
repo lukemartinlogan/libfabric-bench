@@ -33,6 +33,13 @@ add_compile_options(-march=native -fomit-frame-pointer)
 # HermesShm
 find_package(HermesShm CONFIG REQUIRED)
 message(STATUS "found hermes_shm.h at ${HermesShm_INCLUDE_DIRS}")
+include_directories(${HermesShm_INCLUDE_DIRS})
+
+# Pkg-Config
+find_package(PkgConfig REQUIRED)
+if(PkgConfig)
+    message(STATUS "found pkg config")
+endif()
 
 # MPICH
 if(BUILD_MPI_TESTS)

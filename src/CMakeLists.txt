@@ -7,12 +7,14 @@
 # Build benchmark Library
 #------------------------------------------------------------------------------
 add_executable(fabric_server
-        main_server.cc)
-target_link_libraries(fabric_server thallium ${libfabric_LIBRARIES} ${HermesShm_LIBRARIES} yaml-cpp -ldl -lrt -lc)
+        fabric_server.cc)
+target_link_libraries(fabric_server thallium
+        ${libfabric_LIBRARIES} ${HermesShm_LIBRARIES} yaml-cpp -ldl -lrt -lc)
 
 add_executable(fabric_client
-        main_client.cc)
-target_link_libraries(fabric_client thallium ${libfabric_LIBRARIES} ${HermesShm_LIBRARIES} yaml-cpp -ldl -lrt -lc)
+        fabric_client.cc)
+target_link_libraries(fabric_client thallium
+        ${libfabric_LIBRARIES} ${HermesShm_LIBRARIES} yaml-cpp -ldl -lrt -lc)
 
 #-----------------------------------------------------------------------------
 # Add file(s) to CMake Install

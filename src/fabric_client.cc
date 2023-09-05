@@ -6,10 +6,6 @@
 #include "fabric_bench/socket_client.h"
 #include "fabric_bench/socket_server.h"
 
-void Server() {
-
-}
-
 int main(int argc, char **argv) {
   if (argc != 2) {
     printf("USAGE: ./fabric_bench <config_file>\n");
